@@ -1,6 +1,7 @@
 package com.ansavanix.ktanesolver;
 
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -15,18 +16,17 @@ public class KTaNESolver extends Application {
         stage.setScene(scene);
         stage.show();
     }
+    static void showModule(String moduleName) throws IOException{
+        FXMLLoader moduleLoader = new FXMLLoader(KTaNESolver.class.getResource(moduleName + ".fxml"));
+        Stage moduleStage = new Stage();
+        moduleStage.setTitle(moduleName);
+        Scene moduleScene = new Scene(moduleLoader.load(),600,400);
+        moduleStage.setScene(moduleScene);
+        moduleStage.showAndWait();
+
+    }
     public static void showSimpleWires() throws IOException {
-        FXMLLoader wiresLoader = new FXMLLoader(KTaNESolver.class.getResource("simple-wires.fxml"));
-
-        Stage wireStage = new Stage();
-        wireStage.setTitle("Simple Wires");
-        Scene wireScene = new Scene(wiresLoader.load(), 600, 400);
-        wireStage.setScene(wireScene);
-        wireStage.showAndWait();
-
-
-
-
+        showModule("simple-wires");
     }
 
     public static void main(String[] args) {
