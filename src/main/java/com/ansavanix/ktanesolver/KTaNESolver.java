@@ -12,6 +12,7 @@ public class KTaNESolver extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(KTaNESolver.class.getResource("main-menu.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1000, 800);
+        stage.setResizable(false);
         stage.setTitle("KTaNE Solver");
         stage.setScene(scene);
         stage.show();
@@ -20,6 +21,7 @@ public class KTaNESolver extends Application {
         FXMLLoader moduleLoader = new FXMLLoader(KTaNESolver.class.getResource(moduleName + ".fxml"));
         Stage moduleStage = new Stage();
         moduleStage.setTitle(moduleName);
+        moduleStage.setResizable(false);
         Scene moduleScene = new Scene(moduleLoader.load(),600,400);
         moduleStage.setScene(moduleScene);
         moduleStage.showAndWait();
