@@ -33,18 +33,6 @@ public class MenuController {
 
     }
     @FXML
-    protected void onFrkSet() {
-        frk = frkbox.isSelected();
-    }
-    @FXML
-    protected void onCarSet() {
-        car = carbox.isSelected();
-    }
-    @FXML
-    protected void onParaSet() {
-        hasParallel = parabox.isSelected();
-    }
-    @FXML
     protected void onStrikeButton() {
         strikes++;
         strikelabel.setText("Strike Count: " + strikes);
@@ -54,7 +42,12 @@ public class MenuController {
         serial = serialfield.getText().toLowerCase();
         batcount = Integer.parseInt(batfield.getText());
         snIsEven = Integer.parseInt(serial.substring(serial.length() - 1)) % 2 == 0;
-        snHasVowel = serial.contains("a") && serial.contains("e") && serial.contains("i") && serial.contains("o") && serial.contains("u");
+        snHasVowel = serial.contains("a") || serial.contains("e") || serial.contains("i") || serial.contains("o") || serial.contains("u");
+        hasParallel = parabox.isSelected();
+        car = carbox.isSelected();
+        frk = frkbox.isSelected();
+        System.out.println("Info Set!");
+        wiresButton.setVisible(true);
     }
 
     @FXML
@@ -71,5 +64,7 @@ public class MenuController {
     Button strikebutton;
     @FXML
     Label strikelabel;
+    @FXML
+    Button wiresButton;
 
 }
