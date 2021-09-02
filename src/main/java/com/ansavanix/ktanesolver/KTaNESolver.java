@@ -1,7 +1,6 @@
 package com.ansavanix.ktanesolver;
 
 import javafx.application.Application;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -26,9 +25,6 @@ public class KTaNESolver extends Application {
         moduleStage.setScene(moduleScene);
         moduleStage.showAndWait();
 
-    }
-    public static void showSimpleWires() throws IOException {
-        showModule("simple-wires");
     }
 
     public static void main(String[] args) {

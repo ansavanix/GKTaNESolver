@@ -19,18 +19,24 @@ public class MenuController {
     public static boolean snIsEven;
     public static boolean snHasVowel;
 
-
     @FXML
-    protected void onWiresClick() {
-        System.out.println("Simple Wires");
+    protected void onModuleClick(String module) {
+        System.out.println(module);
         try {
-            KTaNESolver.showSimpleWires();
+            KTaNESolver.showModule(module);
+
         }
         catch (IOException e) {
             System.out.println(e);
         }
-
-
+    }
+    @FXML
+    protected void onWiresClick() {
+        onModuleClick("simple-wires");
+    }
+    @FXML
+    protected void onTheButtonClick() {
+        onModuleClick("the-button");
     }
     @FXML
     protected void onStrikeButton() {

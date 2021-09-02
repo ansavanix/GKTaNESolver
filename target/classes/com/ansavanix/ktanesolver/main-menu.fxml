@@ -9,7 +9,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ansavanix.ktanesolver.MenuController">
    <children>
-      <Button fx:id="wiresButton" layoutX="457.0" layoutY="124.0" mnemonicParsing="false" onAction="#onWiresClick" text="Simple WIres" textAlignment="CENTER" visible="false" />
+      <Button fx:id="wiresButton" layoutX="457.0" layoutY="124.0" mnemonicParsing="false" onAction="#onWiresClick" text="Simple WIres" textAlignment="CENTER" />
       <Label layoutX="400.0" layoutY="37.0" text="Module Menu" textAlignment="CENTER">
          <font>
             <Font size="32.0" />
@@ -30,5 +30,6 @@
       <CheckBox fx:id="parabox" layoutX="87.0" layoutY="285.0" mnemonicParsing="false" text="Has Parallel Port" />
       <CheckBox fx:id="carbox" layoutX="87.0" layoutY="311.0" mnemonicParsing="false" text="Car Indicator" />
       <Button fx:id="setinfobutton" layoutX="106.0" layoutY="433.0" mnemonicParsing="false" onAction="#onSetInfo" text="Set Info" />
+      <Button fx:id="theButtonButton" layoutX="463.0" layoutY="162.0" mnemonicParsing="false" onAction="#onTheButtonClick" text="The Button" />
    </children>
 </AnchorPane>
