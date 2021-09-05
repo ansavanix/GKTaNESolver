@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ansavanix.ktanesolver.TheButtonController">
+   <children>
+      <Label layoutX="256.0" layoutY="21.0" text="The Button">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="buttonCombo" layoutX="225.0" layoutY="160.0" prefWidth="150.0" promptText="Button Color">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Blue" />
+               <String fx:value="Red" />
+               <String fx:value="White" />
+               <String fx:value="Yellow" />
+               <String fx:value="Black" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <ComboBox fx:id="stripCombo" layoutX="225.0" layoutY="227.0" prefWidth="150.0" promptText="Strip Color">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Blue" />
+               <String fx:value="Red" />
+               <String fx:value="White" />
+               <String fx:value="Yellow" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <TextField fx:id="buttonTF" layoutX="226.0" layoutY="113.0" promptText="Button Text" />
+      <Button layoutX="259.0" layoutY="289.0" mnemonicParsing="false" onAction="#getSolution" text="Get Solution" />
+      <Label fx:id="output" alignment="CENTER" layoutX="15.0" layoutY="63.0" prefHeight="17.0" prefWidth="571.0" textAlignment="CENTER" />
+   </children>
+</AnchorPane>
