@@ -29,7 +29,10 @@
       <CheckBox fx:id="frkbox" layoutX="87.0" layoutY="258.0" mnemonicParsing="false" text="FRK Indicator" />
       <CheckBox fx:id="parabox" layoutX="87.0" layoutY="285.0" mnemonicParsing="false" text="Has Parallel Port" />
       <CheckBox fx:id="carbox" layoutX="87.0" layoutY="311.0" mnemonicParsing="false" text="Car Indicator" />
-      <Button fx:id="setinfobutton" layoutX="106.0" layoutY="433.0" mnemonicParsing="false" onAction="#onSetInfo" text="Set Info" />
+      <Button fx:id="setinfobutton" layoutX="84.0" layoutY="430.0" mnemonicParsing="false" onAction="#onSetInfo" text="Set Info">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Button>
       <Button fx:id="theButtonButton" layoutX="463.0" layoutY="162.0" mnemonicParsing="false" onAction="#onTheButtonClick" text="The Button" />
    </children>
 </AnchorPane>
