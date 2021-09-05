@@ -39,6 +39,10 @@ public class MenuController {
         onModuleClick("the-button");
     }
     @FXML
+    protected void onKeypadClick() {
+        onModuleClick("keypad");
+    }
+    @FXML
     protected void onStrikeButton() {
         strikes++;
         strikelabel.setText("Strike Count: " + strikes);

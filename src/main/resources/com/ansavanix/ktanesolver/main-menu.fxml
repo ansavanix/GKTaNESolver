@@ -9,7 +9,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ansavanix.ktanesolver.MenuController">
    <children>
-      <Button fx:id="wiresButton" layoutX="457.0" layoutY="124.0" mnemonicParsing="false" onAction="#onWiresClick" text="Simple WIres" textAlignment="CENTER" />
+      <Button fx:id="wiresButton" layoutX="457.0" layoutY="124.0" mnemonicParsing="false" onAction="#onWiresClick" text="Simple Wires" textAlignment="CENTER" />
       <Label layoutX="400.0" layoutY="37.0" text="Module Menu" textAlignment="CENTER">
          <font>
             <Font size="32.0" />
@@ -34,5 +34,6 @@
             <Font name="System Bold" size="20.0" />
          </font></Button>
       <Button fx:id="theButtonButton" layoutX="463.0" layoutY="162.0" mnemonicParsing="false" onAction="#onTheButtonClick" text="The Button" />
+      <Button layoutX="472.0" layoutY="197.0" mnemonicParsing="false" onAction="#onKeypadClick" text="Keypad" />
    </children>
 </AnchorPane>
