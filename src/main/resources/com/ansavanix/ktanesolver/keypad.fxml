@@ -1,16 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ansavanix.ktanesolver.KeypadController">
    <children>
       <Label layoutX="271.0" layoutY="14.0" text="Keypad">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
+      <ImageView fx:id="ae" fitHeight="48.0" fitWidth="48.0" layoutX="8.0" layoutY="166.0" onMouseClicked="#onAeClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@ae.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="at" fitHeight="48.0" fitWidth="48.0" layoutX="71.0" layoutY="166.0" onMouseClicked="#onAtClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@aT.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bt" fitHeight="48.0" fitWidth="48.0" layoutX="141.0" layoutY="166.0" onMouseClicked="#onBtClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@bt.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="copyright" fitHeight="48.0" fitWidth="48.0" layoutX="203.0" layoutY="166.0" onMouseClicked="#onCopyrightClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@copyright.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="cursive" fitHeight="48.0" fitWidth="48.0" layoutX="266.0" layoutY="166.0" onMouseClicked="#onCursiveClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cursive.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="doubleK" fitHeight="48.0" fitWidth="48.0" layoutX="336.0" layoutY="166.0" onMouseClicked="#onDoubleKClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@doubleK.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="dragon" fitHeight="48.0" fitWidth="48.0" layoutX="413.0" layoutY="166.0" onMouseClicked="#onDragonClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@dragon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="euro" fitHeight="48.0" fitWidth="48.0" layoutX="476.0" layoutY="166.0" onMouseClicked="#onEuroClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@euro.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="filledStar" fitHeight="48.0" fitWidth="48.0" layoutX="546.0" layoutY="166.0" onMouseClicked="#onFilledStarClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@filledStar.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hollowStar" fitHeight="48.0" fitWidth="48.0" layoutX="7.0" layoutY="230.0" onMouseClicked="#onHollowStarClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@hollowStar.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hook" fitHeight="48.0" fitWidth="48.0" layoutX="70.0" layoutY="230.0" onMouseClicked="#onHookClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@hook.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hWithHat" fitHeight="48.0" fitWidth="48.0" layoutX="140.0" layoutY="230.0" onMouseClicked="#onHWithHatClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@hWithHat.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="leftC" fitHeight="48.0" fitWidth="48.0" layoutX="202.0" layoutY="230.0" onMouseClicked="#onLeftCClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@leftC.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="meltedThree" fitHeight="48.0" fitWidth="48.0" layoutX="265.0" layoutY="230.0" onMouseClicked="#onMeltedThreeClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@meltedThree.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="omega" fitHeight="48.0" fitWidth="48.0" layoutX="335.0" layoutY="230.0" onMouseClicked="#onOmegaClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@omega.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="paragraph" fitHeight="48.0" fitWidth="48.0" layoutX="412.0" layoutY="230.0" onMouseClicked="#onParagraphClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@paragraph.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pumpkin" fitHeight="48.0" fitWidth="48.0" layoutX="475.0" layoutY="230.0" onMouseClicked="#onPumpkinClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pumpkin.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="puzzle" fitHeight="48.0" fitWidth="48.0" layoutX="545.0" layoutY="230.0" onMouseClicked="#onPuzzleClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@puzzle.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="q" fitHeight="48.0" fitWidth="48.0" layoutX="8.0" layoutY="296.0" onMouseClicked="#onQClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@q.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="questionMark" fitHeight="48.0" fitWidth="48.0" layoutX="71.0" layoutY="296.0" onMouseClicked="#onQuestionMarkClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@questionMark.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="rightC" fitHeight="48.0" fitWidth="48.0" layoutX="141.0" layoutY="296.0" onMouseClicked="#onRightCClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@rightC.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="six" fitHeight="48.0" fitWidth="48.0" layoutX="203.0" layoutY="296.0" onMouseClicked="#onSixClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@six.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="smileyFace" fitHeight="48.0" fitWidth="48.0" layoutX="259.0" layoutY="296.0" onMouseClicked="#onSmileyFaceClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@smileyFace.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="squidKnife" fitHeight="48.0" fitWidth="48.0" layoutX="336.0" layoutY="296.0" onMouseClicked="#onSquidKnifeClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@squidKnife.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="squiggly" fitHeight="48.0" fitWidth="48.0" layoutX="413.0" layoutY="296.0" onMouseClicked="#onSquigglyClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@squiggly.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="trident" fitHeight="48.0" fitWidth="48.0" layoutX="476.0" layoutY="296.0" onMouseClicked="#onTridentClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@trident.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="lambda" fitHeight="48.0" fitWidth="48.0" layoutX="546.0" layoutY="296.0" onMouseClicked="#onLambdaClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@lambda.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="order1" fitHeight="48.0" fitWidth="48.0" layoutX="179.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="order2" fitHeight="48.0" fitWidth="48.0" layoutX="242.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="order3" fitHeight="48.0" fitWidth="48.0" layoutX="305.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="order4" fitHeight="48.0" fitWidth="48.0" layoutX="374.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>
