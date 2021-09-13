@@ -18,24 +18,125 @@ public class KeypadController {
             {"trident","smileyFace","bt","rightC","paragraph","dragon","filledStar"}, //Column 5
             {"six","euro","puzzle","ae","trident","hWithHat","omega"} //Column 6
     };
-    private ArrayList<String> clicked = new ArrayList<>(4);
-    private int orderCount = 0;
+    private int selectedCount = 0;
     private String[] selected = new String[4];
 
     private void onImageClick(String imageName) {
         ArrayList<String> possible = new ArrayList<>();
+        selected[selectedCount] = imageName;
+        selectedCount++;
         for (String[] col : cols) {
-            if (Arrays.asList(col).contains(imageName)) {
+            boolean matches = true;
+            for (int i = 0; i < selectedCount; i++) {
+                if (!Arrays.asList(col).contains(selected[i])) {
+                    matches = false;
+                    break;
+                }
+            }
+            if (matches) {
                 Collections.addAll(possible, col);
             }
         }
+        if (selectedCount == 1) {
+            order1.setImage(stringToImage(selected[0]));
+        }
+        else {
+            setOrder(possible);
+        }
+
         hideAllNot(possible);
     }
-    //TODO
-    private void setOrder(String imageName, ArrayList<String> order) {
+    private void setOrder(ArrayList<String> order) {
+        int[] indexes = new int[selectedCount];
+        for (int i = 0; i < selectedCount; i++) {
+            indexes[i] = order.indexOf(selected[i]);
+        }
+        String[] selectedInOrder = new String[selectedCount];
+        int lowestIndexValue;
+        int lowestIndex;
+        for (int i = 0; i < selectedCount; i++) {
+            lowestIndexValue = 7;
+            lowestIndex = -1;
+            for (int j = 0; j < selectedCount; j++) {
+                if (indexes[j] < lowestIndexValue && indexes[j] != -1) {
+                    lowestIndexValue = indexes[j];
+                    lowestIndex = j;
+                }
+            }
+            selectedInOrder[i] = selected[lowestIndex];
+            indexes[lowestIndex] = -1;
+            }
+        switch(selectedCount) {
+            case 4: {
+                order4.setImage(stringToImage(selectedInOrder[3]));
+            }
+            case 3: {
+                order3.setImage(stringToImage(selectedInOrder[2]));
+            }
+            case 2: {
+                order2.setImage(stringToImage(selectedInOrder[1]));
+                order1.setImage(stringToImage(selectedInOrder[0]));
+            }
+        }
 
 
-
+    }
+    private Image stringToImage(String imageName) {
+        switch(imageName) {
+            case "ae":
+                return ae.getImage();
+            case "at":
+                return at.getImage();
+            case "bt":
+                return bt.getImage();
+            case "copyright":
+                return copyright.getImage();
+            case "cursive":
+                return cursive.getImage();
+            case "doubleK":
+                return doubleK.getImage();
+            case "dragon":
+                return dragon.getImage();
+            case "euro":
+                return euro.getImage();
+            case "filledStar":
+                return filledStar.getImage();
+            case "hollowStar":
+                return hollowStar.getImage();
+            case "hook":
+                return hook.getImage();
+            case "hWithHat":
+                return hWithHat.getImage();
+            case "leftC":
+                return leftC.getImage();
+            case "meltedThree":
+                return meltedThree.getImage();
+            case "omega":
+                return omega.getImage();
+            case "paragraph":
+                return paragraph.getImage();
+            case "pumpkin":
+                return pumpkin.getImage();
+            case "puzzle":
+                return puzzle.getImage();
+            case "q":
+                return q.getImage();
+            case "questionMark":
+                return questionMark.getImage();
+            case "rightC":
+                return rightC.getImage();
+            case "six":
+                return six.getImage();
+            case "smileyFace":
+                return smileyFace.getImage();
+            case "squidKnife":
+                return squidKnife.getImage();
+            case "squiggly":
+                return squiggly.getImage();
+            case "trident":
+                return trident.getImage();
+        }
+        return lambda.getImage();
     }
     @FXML
     private void onAeClick() {
