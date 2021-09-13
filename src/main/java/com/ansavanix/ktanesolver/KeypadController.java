@@ -76,6 +76,7 @@ public class KeypadController {
             case 2: {
                 order2.setImage(stringToImage(selectedInOrder[1]));
                 order1.setImage(stringToImage(selectedInOrder[0]));
+                break;
             }
         }
 
