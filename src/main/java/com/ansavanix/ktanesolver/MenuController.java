@@ -43,6 +43,10 @@ public class MenuController {
         onModuleClick("keypad");
     }
     @FXML
+    protected void onSimonSaysClick() {
+        onModuleClick("simon-says");
+    }
+    @FXML
     protected void onStrikeButton() {
         strikes++;
         strikelabel.setText("Strike Count: " + strikes);

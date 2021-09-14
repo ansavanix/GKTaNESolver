@@ -35,5 +35,6 @@
          </font></Button>
       <Button fx:id="theButtonButton" layoutX="463.0" layoutY="162.0" mnemonicParsing="false" onAction="#onTheButtonClick" text="The Button" />
       <Button layoutX="472.0" layoutY="197.0" mnemonicParsing="false" onAction="#onKeypadClick" text="Keypad" />
+      <Button layoutX="461.0" layoutY="235.0" mnemonicParsing="false" onAction="#onSimonSaysClick" text="Simon Says" />
    </children>
 </AnchorPane>
