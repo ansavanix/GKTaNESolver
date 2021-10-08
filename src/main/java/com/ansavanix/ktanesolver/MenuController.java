@@ -47,10 +47,15 @@ public class MenuController {
         onModuleClick("simon-says");
     }
     @FXML
+    protected void onWhosOnFirstClick() {
+        onModuleClick("whos-on-first");
+    }
+    @FXML
     protected void onStrikeButton() {
         strikes++;
         strikelabel.setText("Strike Count: " + strikes);
     }
+
     @FXML
     protected void onSetInfo() {
         serial = serialfield.getText().toLowerCase();
