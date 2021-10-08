@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ansavanix.ktanesolver.WhosOnFirstController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ansavanix.ktanesolver.WhosOnFirstController">
    <children>
-      <TextField fx:id="display" alignment="CENTER" layoutX="215.0" layoutY="81.0" promptText="Display" />
+      <TextField fx:id="display" alignment="CENTER" layoutX="227.0" layoutY="82.0" promptText="Display" />
       <TextField fx:id="response" alignment="CENTER" layoutX="98.0" layoutY="122.0" prefHeight="24.0" prefWidth="203.0" promptText="Top Left" />
-      <Text fx:id="output" layoutX="253.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Who's On First" />
-      <Button layoutX="276.0" layoutY="211.0" mnemonicParsing="false" onAction="#onComplete" text="Next" />
+      <Button layoutX="281.0" layoutY="209.0" mnemonicParsing="false" onAction="#onComplete" text="Next" />
       <TextField fx:id="response1" alignment="CENTER" layoutX="301.0" layoutY="122.0" prefHeight="24.0" prefWidth="203.0" promptText="Top Right" />
       <TextField fx:id="response2" alignment="CENTER" layoutX="98.0" layoutY="146.0" prefHeight="24.0" prefWidth="203.0" promptText="Middle Left" />
       <TextField fx:id="response11" alignment="CENTER" layoutX="301.0" layoutY="146.0" prefHeight="24.0" prefWidth="203.0" promptText="Middle Right" />
       <TextField fx:id="response3" alignment="CENTER" layoutX="98.0" layoutY="170.0" prefHeight="24.0" prefWidth="203.0" promptText="Bottom Left" />
       <TextField fx:id="response12" alignment="CENTER" layoutX="301.0" layoutY="170.0" prefHeight="24.0" prefWidth="203.0" promptText="Bottom Right" />
+      <Label fx:id="output" layoutX="168.0" layoutY="48.0" prefHeight="17.0" prefWidth="268.0" />
    </children>
 </AnchorPane>

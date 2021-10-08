@@ -11,7 +11,7 @@ public class WhosOnFirstController {
             "hold", "sure", "like"};
     @FXML
     private void onComplete() {
-
+        System.out.println("complete");
     }
     @FXML
     TextField display;
@@ -20,5 +20,5 @@ public class WhosOnFirstController {
     TextField response;
 
     @FXML
-    Label output;
+    Label why;
 }
