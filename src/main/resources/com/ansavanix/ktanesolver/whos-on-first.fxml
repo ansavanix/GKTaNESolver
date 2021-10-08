@@ -7,14 +7,9 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ansavanix.ktanesolver.WhosOnFirstController">
    <children>
-      <TextField fx:id="display" alignment="CENTER" layoutX="227.0" layoutY="82.0" promptText="Display" />
-      <TextField fx:id="response" alignment="CENTER" layoutX="98.0" layoutY="122.0" prefHeight="24.0" prefWidth="203.0" promptText="Top Left" />
-      <Button layoutX="281.0" layoutY="209.0" mnemonicParsing="false" onAction="#onComplete" text="Next" />
-      <TextField fx:id="response1" alignment="CENTER" layoutX="301.0" layoutY="122.0" prefHeight="24.0" prefWidth="203.0" promptText="Top Right" />
-      <TextField fx:id="response2" alignment="CENTER" layoutX="98.0" layoutY="146.0" prefHeight="24.0" prefWidth="203.0" promptText="Middle Left" />
-      <TextField fx:id="response11" alignment="CENTER" layoutX="301.0" layoutY="146.0" prefHeight="24.0" prefWidth="203.0" promptText="Middle Right" />
-      <TextField fx:id="response3" alignment="CENTER" layoutX="98.0" layoutY="170.0" prefHeight="24.0" prefWidth="203.0" promptText="Bottom Left" />
-      <TextField fx:id="response12" alignment="CENTER" layoutX="301.0" layoutY="170.0" prefHeight="24.0" prefWidth="203.0" promptText="Bottom Right" />
+      <TextField fx:id="display" alignment="CENTER" layoutX="227.0" layoutY="82.0" onAction="#onComplete" promptText="Display" />
+      <Button layoutX="278.0" layoutY="175.0" mnemonicParsing="false" onAction="#onComplete" text="Done" />
+      <TextField fx:id="response" alignment="CENTER" layoutX="201.0" layoutY="126.0" prefHeight="24.0" prefWidth="203.0" promptText="Enter Display Value Above" />
       <Label fx:id="output" layoutX="168.0" layoutY="48.0" prefHeight="17.0" prefWidth="268.0" />
    </children>
 </AnchorPane>
