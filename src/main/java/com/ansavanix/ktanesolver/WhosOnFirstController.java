@@ -20,5 +20,5 @@ public class WhosOnFirstController {
     TextField response;
 
     @FXML
-    Label why;
+    Label output;
 }
