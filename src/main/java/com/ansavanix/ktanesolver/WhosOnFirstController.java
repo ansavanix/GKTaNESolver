@@ -48,7 +48,7 @@ public class WhosOnFirstController {
     @FXML
     private void onEnterDisplay() {
         String displayValue = display.getText().toLowerCase();
-        String responsePrompt;
+        String responsePrompt = "";
         switch(displayValue) {
             case "ur":
                 responsePrompt = "Top Left";
@@ -71,9 +71,39 @@ public class WhosOnFirstController {
             case "their":
                 responsePrompt = "Middle Right";
                 break;
-
+            case "":
+            case "reed":
+            case "leed":
+            case "they're":
+                responsePrompt = "Bottom Left";
+                break;
+            case "display":
+            case "says":
+            case "no":
+            case "lead":
+            case "hold on":
+            case "you are":
+            case "there":
+            case "see":
+            case "cee":
+                responsePrompt = "Bottom Right";
+                break;
         }
+        response.setPromptText("Enter " + responsePrompt + " label.");
 
+    }
+    @FXML
+    private void onComplete() {
+        output.setText(getAssociatedList(response.getText().toLowerCase()));
+
+    }
+
+    @FXML
+    private void reset() {
+        display.setText("");
+        response.setPromptText("Enter Display Value First.");
+        response.setText("");
+        output.setText("");
     }
     @FXML
     TextField display;
