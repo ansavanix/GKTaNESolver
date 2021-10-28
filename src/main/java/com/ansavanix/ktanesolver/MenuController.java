@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class MenuController {
     public static String serial;
-    public static int batcount;
+    public static int batCount;
     public static boolean hasParallel = false;
     public static boolean frk = false;
     public static boolean car = false;
@@ -51,38 +51,42 @@ public class MenuController {
         onModuleClick("whos-on-first");
     }
     @FXML
+    protected void onMemoryClick() {
+        onModuleClick("memory");
+    }
+    @FXML
     protected void onStrikeButton() {
         strikes++;
-        strikelabel.setText("Strike Count: " + strikes);
+        strikeLabel.setText("Strike Count: " + strikes);
     }
 
     @FXML
     protected void onSetInfo() {
-        serial = serialfield.getText().toLowerCase();
-        batcount = Integer.parseInt(batfield.getText());
+        serial = serialField.getText().toLowerCase();
+        batCount = Integer.parseInt(batField.getText());
         snIsEven = Integer.parseInt(serial.substring(serial.length() - 1)) % 2 == 0;
         snHasVowel = serial.contains("a") || serial.contains("e") || serial.contains("i") || serial.contains("o") || serial.contains("u");
-        hasParallel = parabox.isSelected();
-        car = carbox.isSelected();
-        frk = frkbox.isSelected();
+        hasParallel = paraBox.isSelected();
+        car = carBox.isSelected();
+        frk = frkBox.isSelected();
         System.out.println("Info Set!");
         wiresButton.setVisible(true);
     }
 
     @FXML
-    CheckBox frkbox;
+    CheckBox frkBox;
     @FXML
-    CheckBox carbox;
+    CheckBox carBox;
     @FXML
-    CheckBox parabox;
+    CheckBox paraBox;
     @FXML
-    TextField serialfield;
+    TextField serialField;
     @FXML
-    TextField batfield;
+    TextField batField;
     @FXML
-    Button strikebutton;
+    Button strikeButton;
     @FXML
-    Label strikelabel;
+    Label strikeLabel;
     @FXML
     Button wiresButton;
 

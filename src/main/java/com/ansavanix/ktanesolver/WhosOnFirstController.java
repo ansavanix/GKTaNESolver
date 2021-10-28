@@ -95,7 +95,6 @@ public class WhosOnFirstController {
     @FXML
     private void onComplete() {
         output.setText(getAssociatedList(response.getText().toLowerCase()));
-
     }
 
     @FXML
