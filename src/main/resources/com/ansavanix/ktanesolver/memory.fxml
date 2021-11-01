@@ -5,11 +5,12 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ansavanix.ktanesolver.MemoryController">
    <children>
-      <TextField fx:id="display" alignment="CENTER" layoutX="226.0" layoutY="129.0" onAction="#onComplete" promptText="Enter Display Value" />
-      <Button layoutX="268.0" layoutY="175.0" mnemonicParsing="false" onAction="#onComplete" text="Continue" />
+      <TextField fx:id="display" alignment="CENTER" layoutX="198.0" layoutY="118.0" onAction="#onEnterDisplayValue" prefHeight="25.0" prefWidth="161.0" promptText="Enter Display Value" />
+      <Button layoutX="359.0" layoutY="118.0" mnemonicParsing="false" onAction="#onEnterDisplayValue" text="Enter" />
       <Label fx:id="output" alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="25.0" prefHeight="59.0" prefWidth="571.0" textAlignment="CENTER" />
+      <TextField fx:id="get" alignment="CENTER" layoutX="198.0" layoutY="155.0" onAction="#onEnterAsk" prefHeight="25.0" prefWidth="161.0" promptText="Enter Display Value Above" />
+      <Button layoutX="359.0" layoutY="155.0" mnemonicParsing="false" onAction="#onEnterAsk" text="Enter" />
    </children>
 </AnchorPane>
