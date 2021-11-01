@@ -59,6 +59,22 @@ public class MenuController {
         onModuleClick("morse-code");
     }
     @FXML
+    protected void onComplicatedWiresClick() {
+        onModuleClick("complicated-wires");
+    }
+    @FXML
+    protected void onWireSequencesClick() {
+        onModuleClick("wire-sequences");
+    }
+    @FXML
+    protected void onMazesClick() {
+        onModuleClick("mazes");
+    }
+    @FXML
+    protected void onPasswordsClick() {
+        onModuleClick("passwords");
+    }
+    @FXML
     protected void onStrikeButton() {
         strikes++;
         strikeLabel.setText("Strike Count: " + strikes);
