@@ -55,6 +55,10 @@ public class MenuController {
         onModuleClick("memory");
     }
     @FXML
+    protected void onMorseCodeClick() {
+        onModuleClick("morse-code");
+    }
+    @FXML
     protected void onStrikeButton() {
         strikes++;
         strikeLabel.setText("Strike Count: " + strikes);

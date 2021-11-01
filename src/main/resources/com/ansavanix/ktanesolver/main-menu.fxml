@@ -38,5 +38,6 @@
       <Button layoutX="461.0" layoutY="235.0" mnemonicParsing="false" onAction="#onSimonSaysClick" text="Simon Says" />
       <Button layoutX="454.0" layoutY="273.0" mnemonicParsing="false" onAction="#onWhosOnFirstClick" text="Who's On First" />
       <Button layoutX="471.0" layoutY="307.0" mnemonicParsing="false" onAction="#onMemoryClick" text="Memory" />
+      <Button layoutX="461.0" layoutY="344.0" mnemonicParsing="false" onAction="#onMorseCodeClick" text="Morse Code" />
    </children>
 </AnchorPane>
