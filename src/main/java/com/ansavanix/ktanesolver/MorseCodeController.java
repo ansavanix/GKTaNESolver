@@ -50,6 +50,7 @@ public class MorseCodeController {
             morseForm = morseForm.substring(end+1);
         }
         output.setText(humanForm);
+
     }
     @FXML
     TextField input;
