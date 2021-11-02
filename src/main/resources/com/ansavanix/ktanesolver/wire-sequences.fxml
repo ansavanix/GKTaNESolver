@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.ansavanix.ktanesolver.WireSequencesController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ansavanix.ktanesolver.WireSequencesController">
+   <children>
+      <Label layoutX="31.0" layoutY="26.0" prefHeight="17.0" prefWidth="385.0" text="Enter wire color from first to last. red, black, or blue." />
+      <Label layoutX="31.0" layoutY="43.0" prefHeight="17.0" prefWidth="385.0" text="Short Form: red = r, black = k, blue = b." />
+      <TextField fx:id="colorInput" alignment="CENTER" layoutX="153.0" layoutY="91.0" onAction="#onEnter" promptText="Enter Wire Color" />
+      <Button layoutX="279.0" layoutY="129.0" mnemonicParsing="false" onAction="#onEnter" text="Enter" />
+      <Label fx:id="output" alignment="CENTER" layoutX="20.0" layoutY="192.0" prefHeight="17.0" prefWidth="563.0" />
+      <TextField fx:id="posInput" alignment="CENTER" layoutX="302.0" layoutY="91.0" onAction="#onEnter" promptText="Enter Wire Position" />
+      <Label layoutX="31.0" layoutY="60.0" prefHeight="17.0" prefWidth="385.0" text="Enter wire position a, b, or c." />
+   </children>
 </AnchorPane>

@@ -8,7 +8,7 @@ import javafx.scene.control.TextField;
 public class ComplicatedWiresController {
     @FXML
     private void onEnter() {
-        String wireStr = input.getText();
+        String wireStr = input.getText().toLowerCase().trim();
         String instruction;
         switch (wireStr)
         {
