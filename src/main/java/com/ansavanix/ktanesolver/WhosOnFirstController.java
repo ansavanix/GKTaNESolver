@@ -41,15 +41,23 @@ public class WhosOnFirstController {
             "YOU ARE, DONE, LIKE, YOU'RE, YOU, HOLD, UH HUH, UR, SURE, U, WHAT?, NEXT, YOUR, UH UH",
             "YOU'RE, NEXT, U, UR, HOLD, DONE, UH UH, WHAT?, UH HUH, YOU, LIKE, SURE, YOU ARE, YOUR"
     };
+    @FXML
+    TextField display;
+    @FXML
+    TextField response;
+    @FXML
+    Label output;
+
     private String getAssociatedList(String response) {
         int index = Arrays.asList(responses).indexOf(response);
         return associatedList[index];
     }
+
     @FXML
     private void onEnterDisplay() {
         String displayValue = display.getText().toLowerCase();
         String responsePrompt = "";
-        switch(displayValue) {
+        switch (displayValue) {
             case "ur":
                 responsePrompt = "Top Left";
                 break;
@@ -92,6 +100,7 @@ public class WhosOnFirstController {
         response.setPromptText("Enter " + responsePrompt + " label.");
 
     }
+
     @FXML
     private void onComplete() {
         output.setText(getAssociatedList(response.getText().toLowerCase()));
@@ -104,12 +113,4 @@ public class WhosOnFirstController {
         response.setText("");
         output.setText("");
     }
-    @FXML
-    TextField display;
-
-    @FXML
-    TextField response;
-
-    @FXML
-    Label output;
 }

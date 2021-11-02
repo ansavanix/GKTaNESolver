@@ -7,6 +7,14 @@ import javafx.scene.control.TextField;
 
 
 public class TheButtonController {
+    @FXML
+    TextField buttonTF;
+    @FXML
+    ComboBox buttonCombo;
+    @FXML
+    ComboBox stripCombo;
+    @FXML
+    Label output;
     private String buttonText;
     private String buttonColor;
     private String stripColor;
@@ -17,13 +25,16 @@ public class TheButtonController {
         buttonColor = (String) buttonCombo.getValue();
         stripColor = (String) stripCombo.getValue();
         if (buttonText.equals("Abort")) refer();
-        else if (MenuController.batCount > 1 && buttonText.equals("detonate")) output.setText("Press and release immediately");
+        else if (MenuController.batCount > 1 && buttonText.equals("detonate"))
+            output.setText("Press and release immediately");
         else if (buttonColor.equals("White") && MenuController.car) refer();
         else if (MenuController.batCount > 2 && MenuController.frk) output.setText("Press and release immediately");
         else if (buttonColor.equals("Yellow")) refer();
-        else if (buttonColor.equals("Red") && buttonText.equals("hold")) output.setText("Press and release immediately");
+        else if (buttonColor.equals("Red") && buttonText.equals("hold"))
+            output.setText("Press and release immediately");
         else refer();
     }
+
     void refer() {
         String position;
         if (stripColor.equals("Blue")) position = "4";
@@ -31,13 +42,5 @@ public class TheButtonController {
         else position = "1";
         output.setText("Press and release when the countdown timer has a " + position + " in any position");
     }
-    @FXML
-    TextField buttonTF;
-    @FXML
-    ComboBox buttonCombo;
-    @FXML
-    ComboBox stripCombo;
-    @FXML
-    Label output;
 
 }

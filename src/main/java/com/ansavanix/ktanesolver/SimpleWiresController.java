@@ -4,13 +4,31 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class SimpleWiresController {
+    @FXML
+    ComboBox wireComboBox;
+    @FXML
+    ComboBox color1;
+    @FXML
+    ComboBox color2;
+    @FXML
+    ComboBox color3;
+    @FXML
+    ComboBox color4;
+    @FXML
+    ComboBox color5;
+    @FXML
+    ComboBox color6;
+    @FXML
+    Label output;
+    @FXML
+    Button solvebutton;
     private int wireCount;
     private List<String> colors;
-
 
     public void getWireCount() {
 
@@ -18,6 +36,7 @@ public class SimpleWiresController {
         System.out.println(wireCount);
         showColors();
     }
+
     public void showColors() {
 
         switch (wireCount) {
@@ -39,7 +58,7 @@ public class SimpleWiresController {
             }
 
         }
-        switch(wireCount) {
+        switch (wireCount) {
             case 3: {
                 color4.setVisible(false);
             }
@@ -52,35 +71,40 @@ public class SimpleWiresController {
             }
         }
     }
+
     public void getSolution() {
         String toCut = "";
         getColors();
-        switch(wireCount) {
+        switch (wireCount) {
             case 3: {
                 if (!colors.contains("red")) toCut = "Second";
-                else if(colors.get(2).equals("white")) toCut = "Last";
-                else if(colors.indexOf("blue") != colors.lastIndexOf("blue")) toCut = "Last Blue";
+                else if (colors.get(2).equals("white")) toCut = "Last";
+                else if (colors.indexOf("blue") != colors.lastIndexOf("blue")) toCut = "Last Blue";
                 else toCut = "Last";
                 break;
             }
             case 4: {
-                if((colors.indexOf("red") != colors.lastIndexOf("red")) && !MenuController.snIsEven) toCut = "Last Red";
+                if ((colors.indexOf("red") != colors.lastIndexOf("red")) && !MenuController.snIsEven)
+                    toCut = "Last Red";
                 else if (colors.get(3).equals("yellow") && !colors.contains("red")) toCut = "First";
-                else if (colors.indexOf("blue") == colors.lastIndexOf("blue") && colors.contains("blue")) toCut = "First";
+                else if (colors.indexOf("blue") == colors.lastIndexOf("blue") && colors.contains("blue"))
+                    toCut = "First";
                 else if (colors.indexOf("yellow") != colors.lastIndexOf("yellow")) toCut = "Last";
                 else toCut = "Second";
                 break;
             }
             case 5: {
-                if(colors.get(4).equals("black") && !MenuController.snIsEven) toCut = "Fourth";
-                else if ((colors.indexOf("yellow") != colors.lastIndexOf("yellow")) && (colors.indexOf("red") == colors.lastIndexOf("red") && colors.contains("red"))) toCut = "First";
+                if (colors.get(4).equals("black") && !MenuController.snIsEven) toCut = "Fourth";
+                else if ((colors.indexOf("yellow") != colors.lastIndexOf("yellow")) && (colors.indexOf("red") == colors.lastIndexOf("red") && colors.contains("red")))
+                    toCut = "First";
                 else if (!colors.contains("black")) toCut = "Second";
                 else toCut = "First";
                 break;
             }
             case 6: {
-                if (!colors.contains("yellow") && !MenuController.snIsEven)  toCut = "Third";
-                else if ((colors.indexOf("yellow") == colors.lastIndexOf("yellow") && colors.contains("yellow") && (colors.indexOf("yellow") != colors.lastIndexOf("yellow")))) toCut = "Fourth";
+                if (!colors.contains("yellow") && !MenuController.snIsEven) toCut = "Third";
+                else if ((colors.indexOf("yellow") == colors.lastIndexOf("yellow") && colors.contains("yellow") && (colors.indexOf("yellow") != colors.lastIndexOf("yellow"))))
+                    toCut = "Fourth";
                 else if (!colors.contains("red")) toCut = "Last";
                 else toCut = "Fourth";
             }
@@ -88,6 +112,7 @@ public class SimpleWiresController {
         output.setText("Cut the " + toCut + " wire");
 
     }
+
     public void getColors() {
         colors = new ArrayList<String>(wireCount);
         for (int i = 0; i < wireCount; i++) {
@@ -114,25 +139,4 @@ public class SimpleWiresController {
         }
 
     }
-
-
-
-    @FXML
-    ComboBox wireComboBox;
-    @FXML
-    ComboBox color1;
-    @FXML
-    ComboBox color2;
-    @FXML
-    ComboBox color3;
-    @FXML
-    ComboBox color4;
-    @FXML
-    ComboBox color5;
-    @FXML
-    ComboBox color6;
-    @FXML
-    Label output;
-    @FXML
-    Button solvebutton;
 }

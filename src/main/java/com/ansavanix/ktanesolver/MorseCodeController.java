@@ -39,21 +39,22 @@ public class MorseCodeController {
             "--.." //Z
     };
     @FXML
+    TextField input;
+    @FXML
+    Label output;
+
+    @FXML
     private void onEnter() {
         String humanForm = "";
         String morseForm = input.getText().trim() + " ";
         while (morseForm.contains(" ")) {
             int end = morseForm.indexOf(" ");
-            String morseCharacter = morseForm.substring(0,end);
+            String morseCharacter = morseForm.substring(0, end);
             int index = Arrays.asList(inMorseCode).indexOf(morseCharacter);
-            humanForm += characters.substring(index,index+1);
-            morseForm = morseForm.substring(end+1);
+            humanForm += characters.substring(index, index + 1);
+            morseForm = morseForm.substring(end + 1);
         }
         output.setText(humanForm);
 
     }
-    @FXML
-    TextField input;
-    @FXML
-    Label output;
 }

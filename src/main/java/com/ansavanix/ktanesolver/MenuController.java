@@ -18,6 +18,22 @@ public class MenuController {
     public static int strikes;
     public static boolean snIsEven;
     public static boolean snHasVowel;
+    @FXML
+    CheckBox frkBox;
+    @FXML
+    CheckBox carBox;
+    @FXML
+    CheckBox paraBox;
+    @FXML
+    TextField serialField;
+    @FXML
+    TextField batField;
+    @FXML
+    Button strikeButton;
+    @FXML
+    Label strikeLabel;
+    @FXML
+    Button wiresButton;
 
     @FXML
     protected void onModuleClick(String module) {
@@ -25,55 +41,66 @@ public class MenuController {
         try {
             KTaNESolver.showModule(module);
 
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             System.out.println(e);
         }
     }
+
     @FXML
     protected void onWiresClick() {
         onModuleClick("simple-wires");
     }
+
     @FXML
     protected void onTheButtonClick() {
         onModuleClick("the-button");
     }
+
     @FXML
     protected void onKeypadClick() {
         onModuleClick("keypad");
     }
+
     @FXML
     protected void onSimonSaysClick() {
         onModuleClick("simon-says");
     }
+
     @FXML
     protected void onWhosOnFirstClick() {
         onModuleClick("whos-on-first");
     }
+
     @FXML
     protected void onMemoryClick() {
         onModuleClick("memory");
     }
+
     @FXML
     protected void onMorseCodeClick() {
         onModuleClick("morse-code");
     }
+
     @FXML
     protected void onComplicatedWiresClick() {
         onModuleClick("complicated-wires");
     }
+
     @FXML
     protected void onWireSequencesClick() {
         onModuleClick("wire-sequences");
     }
+
     @FXML
     protected void onMazesClick() {
         onModuleClick("mazes");
     }
+
     @FXML
     protected void onPasswordsClick() {
         onModuleClick("passwords");
     }
+
     @FXML
     protected void onStrikeButton() {
         strikes++;
@@ -92,22 +119,5 @@ public class MenuController {
         System.out.println("Info Set!");
         wiresButton.setVisible(true);
     }
-
-    @FXML
-    CheckBox frkBox;
-    @FXML
-    CheckBox carBox;
-    @FXML
-    CheckBox paraBox;
-    @FXML
-    TextField serialField;
-    @FXML
-    TextField batField;
-    @FXML
-    Button strikeButton;
-    @FXML
-    Label strikeLabel;
-    @FXML
-    Button wiresButton;
 
 }

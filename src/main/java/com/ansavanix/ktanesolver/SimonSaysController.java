@@ -8,11 +8,14 @@ import java.util.List;
 
 
 public class SimonSaysController {
+    @FXML
+    Label output;
     private List<String> responses = new ArrayList<>();
+
     private void onColorClick(String color) {
         String response = "";
         if (MenuController.snHasVowel) {
-            switch(MenuController.strikes){
+            switch (MenuController.strikes) {
                 case 0:
                     switch (color) {
                         case "red":
@@ -63,9 +66,8 @@ public class SimonSaysController {
                     }
                     break;
             }
-        }
-        else {
-            switch(MenuController.strikes){
+        } else {
+            switch (MenuController.strikes) {
                 case 0:
                     switch (color) {
                         case "red":
@@ -126,23 +128,25 @@ public class SimonSaysController {
         }
         output.setText(labelString);
     }
+
     @FXML
-    private void onRedClick(){
+    private void onRedClick() {
         onColorClick("red");
     }
+
     @FXML
     private void onBlueClick() {
         onColorClick("blue");
     }
+
     @FXML
     private void onGreenClick() {
         onColorClick("green");
     }
+
     @FXML
     private void onYellowClick() {
         onColorClick("yellow");
     }
-    @FXML
-    Label output;
 
 }
