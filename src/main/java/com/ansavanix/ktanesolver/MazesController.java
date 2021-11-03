@@ -5,9 +5,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class MazesController {
-    //TODO: Find a way to store maze data in a way to make solving them easy.
-    //Perhaps use a 2D array for each maze and for each position store what direction the white light can go from there.
-    //From the starting position, create a branch going in every possible direction and tell the user the path of the shortest successful branch.
     //Use a character to represent where the white light can go from each position of the maze.
     //u = can go up.
     //d = can go down.
@@ -24,7 +21,7 @@ public class MazesController {
     };
     //Array of Circular Mark coordinates to quickly find which maze we are solving.
     private final String mazeCMarks[] = {"1,2 6,3"};
-
+    private String globalDirections = "";
 
 
     @FXML
@@ -37,14 +34,23 @@ public class MazesController {
     TextField cmark2;
     @FXML
     Label output;
-    private String solveMaze(String[][] mazeArray, int startX, int startY, int endX, int endY, String previousMovements) {
-        if(startX == endX && startY == endY) {
-            return previousMovements;
-        }
-        String prevMovement = previousMovements;
-        String startingMovementOptions = mazeArray[startX][startY];
+    //TODO: Solve maze based of starting and end coordinates.
+    private String solveMaze(String[][] mazeArray, int sX, int sY, int eX,int eY) {
+        String directions = "";
+        String options = mazeArray[sX][sY];
+        boolean solved = false;
+        //Branch off from each of the initial options.
+        for(int i = 0; i < options.length(); i++) {
+            String opt = options.substring(i,i+1);
 
+        }
+
+
+        return directions;
     }
+
+
+
     @FXML
     private void onEnter() {
         String startingPoint = whiteLight.getText();
