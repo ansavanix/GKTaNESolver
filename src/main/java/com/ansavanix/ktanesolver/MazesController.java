@@ -19,9 +19,12 @@ public class MazesController {
             {"ur", "l", "ur", "ul", "r", "ul"} //Row 6
 
     };
+    private final String simpleMaze[][] = {
+            {"d","d"},
+            {"ur", "ul"}
+    };
     //Array of Circular Mark coordinates to quickly find which maze we are solving.
     private final String mazeCMarks[] = {"1,2 6,3"};
-    private String globalDirections = "";
 
 
     @FXML
@@ -35,19 +38,37 @@ public class MazesController {
     @FXML
     Label output;
     //TODO: Solve maze based of starting and end coordinates.
-    private String solveMaze(String[][] mazeArray, int sX, int sY, int eX,int eY) {
-        String directions = "";
+    private String solveMaze(String[][] mazeArray, int sX, int sY, int eX,int eY, String dir) {
+        if (sX == eX && sY == eY) return dir = "SUCC";
+        String directions = dir;
         String options = mazeArray[sX][sY];
-        boolean solved = false;
-        //Branch off from each of the initial options.
-        for(int i = 0; i < options.length(); i++) {
+        String reverseLastDir;
+        if (directions.length() > 0) {
+            switch(dir.substring(dir.length()-1)) {
+                case "l":
+                    reverseLastDir = "r";
+                    break;
+                case "r":
+                    reverseLastDir = "l";
+                    break;
+                case "u":
+                    reverseLastDir = "d";
+                    break;
+                default:
+                    reverseLastDir = "u";
+                    break;
+            }
+            options = options.substring(0, options.indexOf(reverseLastDir)) + options.substring(options.indexOf(reverseLastDir) + 1);
+        }
+        if (options.length() == 0) return "FIN";
+        for (int i = 0; i < options.length(); i++) {
             String opt = options.substring(i,i+1);
 
         }
-
-
         return directions;
+
     }
+
 
 
 
@@ -59,6 +80,7 @@ public class MazesController {
         int startY = Integer.parseInt(startingPoint.substring(2,3)) - 1;
         int endX = Integer.parseInt(endPoint.substring(0,1)) - 1;
         int endY = Integer.parseInt(endPoint.substring(2,3)) - 1;
+
 
     }
 }
