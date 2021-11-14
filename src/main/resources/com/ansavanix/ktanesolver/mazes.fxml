@@ -5,16 +5,14 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ansavanix.ktanesolver.MazesController">
    <children>
       <Label layoutX="20.0" layoutY="22.0" prefHeight="17.0" prefWidth="541.0" text="Enter x,y coordinates of the white light and red triangle, Circular Marking 1, and Circular Marking 2." />
-      <Label layoutX="20.0" layoutY="39.0" prefHeight="17.0" prefWidth="330.0" text="Format: x,y, Example, 1,2. Start counting at 1." />
-      <TextField fx:id="whiteLight" alignment="CENTER" layoutX="151.0" layoutY="114.0" promptText="White Light Coordinates" />
-      <TextField fx:id="redTriangle" alignment="CENTER" layoutX="300.0" layoutY="114.0" promptText="Red Triangle Coordinates" />
-      <Button layoutX="278.0" layoutY="157.0" mnemonicParsing="false" text="Done" />
+      <Label layoutX="20.0" layoutY="39.0" prefHeight="17.0" prefWidth="330.0" text="Format: x,y, Example, 1,2. Start counting at 0." />
+      <TextField fx:id="whiteLight" alignment="CENTER" layoutX="134.0" layoutY="114.0" promptText="White Light Coordinates" />
+      <TextField fx:id="redTriangle" alignment="CENTER" layoutX="301.0" layoutY="114.0" promptText="Red Triangle Coordinates" />
+      <Button layoutX="278.0" layoutY="157.0" mnemonicParsing="false" onAction="#onEnter" text="Done" />
       <Label fx:id="output" alignment="CENTER" layoutX="45.0" layoutY="229.0" prefHeight="17.0" prefWidth="512.0" />
-      <TextField fx:id="cmark1" alignment="CENTER" layoutX="151.0" layoutY="89.0" promptText="Circular Marking 1" />
-      <TextField fx:id="cmark2" alignment="CENTER" layoutX="300.0" layoutY="89.0" promptText="Circular Marking 2" />
+      <TextField fx:id="cmark" alignment="CENTER" layoutX="215.0" layoutY="90.0" promptText="Circular Marking Coordinate" />
    </children>
 </AnchorPane>
