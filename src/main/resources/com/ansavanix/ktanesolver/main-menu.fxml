@@ -9,7 +9,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ansavanix.ktanesolver.MenuController">
    <children>
-      <Button fx:id="wiresButton" layoutX="449.0" layoutY="104.0" mnemonicParsing="false" onAction="#onWiresClick" text="Simple Wires" textAlignment="CENTER" />
+      <Button layoutX="449.0" layoutY="104.0" mnemonicParsing="false" onAction="#onWiresClick" text="Simple Wires" textAlignment="CENTER" />
       <Label layoutX="393.0" layoutY="23.0" text="Module Menu" textAlignment="CENTER">
          <font>
             <Font size="32.0" />
@@ -33,7 +33,7 @@
          <font>
             <Font name="System Bold" size="20.0" />
          </font></Button>
-      <Button fx:id="theButtonButton" layoutX="455.0" layoutY="137.0" mnemonicParsing="false" onAction="#onTheButtonClick" text="The Button" />
+      <Button layoutX="455.0" layoutY="137.0" mnemonicParsing="false" onAction="#onTheButtonClick" text="The Button" />
       <Button layoutX="467.0" layoutY="168.0" mnemonicParsing="false" onAction="#onKeypadClick" text="Keypad" />
       <Button layoutX="453.0" layoutY="200.0" mnemonicParsing="false" onAction="#onSimonSaysClick" text="Simon Says" />
       <Button layoutX="444.0" layoutY="234.0" mnemonicParsing="false" onAction="#onWhosOnFirstClick" text="Who's On First" />

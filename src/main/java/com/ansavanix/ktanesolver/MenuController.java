@@ -32,8 +32,6 @@ public class MenuController {
     Button strikeButton;
     @FXML
     Label strikeLabel;
-    @FXML
-    Button wiresButton;
 
     @FXML
     protected void onModuleClick(String module) {
@@ -117,7 +115,6 @@ public class MenuController {
         car = carBox.isSelected();
         frk = frkBox.isSelected();
         System.out.println("Info Set!");
-        wiresButton.setVisible(true);
     }
 
 }
