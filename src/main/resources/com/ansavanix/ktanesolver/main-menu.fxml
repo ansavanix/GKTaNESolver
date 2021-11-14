@@ -9,13 +9,13 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ansavanix.ktanesolver.MenuController">
    <children>
-      <Button fx:id="wiresButton" layoutX="457.0" layoutY="124.0" mnemonicParsing="false" onAction="#onWiresClick" text="Simple Wires" textAlignment="CENTER" />
-      <Label layoutX="400.0" layoutY="37.0" text="Module Menu" textAlignment="CENTER">
+      <Button fx:id="wiresButton" layoutX="449.0" layoutY="104.0" mnemonicParsing="false" onAction="#onWiresClick" text="Simple Wires" textAlignment="CENTER" />
+      <Label layoutX="393.0" layoutY="23.0" text="Module Menu" textAlignment="CENTER">
          <font>
             <Font size="32.0" />
          </font>
       </Label>
-      <Label layoutX="97.0" layoutY="84.0" text="Bomb Info">
+      <Label contentDisplay="CENTER" layoutX="103.0" layoutY="85.0" text="Bomb Info" textAlignment="CENTER">
          <font>
             <Font size="15.0" />
          </font>
@@ -33,15 +33,15 @@
          <font>
             <Font name="System Bold" size="20.0" />
          </font></Button>
-      <Button fx:id="theButtonButton" layoutX="463.0" layoutY="162.0" mnemonicParsing="false" onAction="#onTheButtonClick" text="The Button" />
-      <Button layoutX="472.0" layoutY="197.0" mnemonicParsing="false" onAction="#onKeypadClick" text="Keypad" />
-      <Button layoutX="461.0" layoutY="235.0" mnemonicParsing="false" onAction="#onSimonSaysClick" text="Simon Says" />
-      <Button layoutX="454.0" layoutY="273.0" mnemonicParsing="false" onAction="#onWhosOnFirstClick" text="Who's On First" />
-      <Button layoutX="471.0" layoutY="307.0" mnemonicParsing="false" onAction="#onMemoryClick" text="Memory" />
-      <Button layoutX="461.0" layoutY="344.0" mnemonicParsing="false" onAction="#onMorseCodeClick" text="Morse Code" />
-      <Button layoutX="444.0" layoutY="375.0" mnemonicParsing="false" onAction="#onComplicatedWiresClick" text="Complicated Wires" />
-      <Button layoutX="449.0" layoutY="405.0" mnemonicParsing="false" onAction="#onWireSequencesClick" text="Wire Sequences" />
-      <Button layoutX="475.0" layoutY="440.0" mnemonicParsing="false" onAction="#onMazesClick" text="Mazes" />
-      <Button layoutX="465.0" layoutY="474.0" mnemonicParsing="false" onAction="#onPasswordsClick" text="Passwords" />
+      <Button fx:id="theButtonButton" layoutX="455.0" layoutY="137.0" mnemonicParsing="false" onAction="#onTheButtonClick" text="The Button" />
+      <Button layoutX="467.0" layoutY="168.0" mnemonicParsing="false" onAction="#onKeypadClick" text="Keypad" />
+      <Button layoutX="453.0" layoutY="200.0" mnemonicParsing="false" onAction="#onSimonSaysClick" text="Simon Says" />
+      <Button layoutX="444.0" layoutY="234.0" mnemonicParsing="false" onAction="#onWhosOnFirstClick" text="Who's On First" />
+      <Button layoutX="466.0" layoutY="264.0" mnemonicParsing="false" onAction="#onMemoryClick" text="Memory" />
+      <Button layoutX="454.0" layoutY="299.0" mnemonicParsing="false" onAction="#onMorseCodeClick" text="Morse Code" />
+      <Button layoutX="430.0" layoutY="329.0" mnemonicParsing="false" onAction="#onComplicatedWiresClick" text="Complicated Wires" />
+      <Button layoutX="439.0" layoutY="363.0" mnemonicParsing="false" onAction="#onWireSequencesClick" text="Wire Sequences" />
+      <Button layoutX="472.0" layoutY="399.0" mnemonicParsing="false" onAction="#onMazesClick" text="Mazes" />
+      <Button layoutX="458.0" layoutY="430.0" mnemonicParsing="false" onAction="#onPasswordsClick" text="Passwords" />
    </children>
 </AnchorPane>
