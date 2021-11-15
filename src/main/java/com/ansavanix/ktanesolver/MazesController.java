@@ -14,12 +14,12 @@ public class MazesController {
     //r = can go right.
     //l = can go left.
     //Mazes listed starting from the top left.
-    private final String[][] maze1 = {
+    private final String[][] maze1 =  {
             {"rd", "lr", "ld", "rd", "lr", "l"},
             {"ud", "rd", "ul", "ur", "lr", "ld"},
-            {"ud", "ur", "ld", "ur", "lr", "udl"},
-            {"ud", "r", "ulr", "ul", "r", "udl"},
-            {"udl", "lr", "ld", "rd", "l", "ud"},
+            {"ud", "ur", "ld", "rd", "lr", "uld"},
+            {"ud", "r", "ulr", "lu", "r", "uld"},
+            {"urd", "lr", "ld", "rd", "l", "ud"},
             {"ur", "l", "ur", "ul", "r", "ul"}
     };
     private final String[][] maze2 = {
@@ -237,7 +237,6 @@ public class MazesController {
     there are multiple directions you can go in. These points of the maze are critical to know as they are points where
     you cannot go through all directions available at the same time.
      */
-    //TODO: Fix error when solving maze9. Occurs when going from coordinate 0,0 to coordinate 5,5/
     private String solveMaze(String[][] mazeArray, int sX, int sY, int eX, int eY) {
         String tempDirections = "";
         int[] checkpointX = new int[36];
