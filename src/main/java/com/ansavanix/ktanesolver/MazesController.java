@@ -3,6 +3,7 @@ package com.ansavanix.ktanesolver;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 
 
 public class MazesController {
@@ -87,7 +88,8 @@ public class MazesController {
 
     //Array of Circular Mark coordinates to quickly find which maze we are solving.
     private final String[] mazeCMarks = {"0,1 5,2", "4,1 1,3", "3,3 5,3", "0,0 0,3", "4,2 3,5", "4,0 2,4", "1,0 1,5", "3,0 2,3", "1,2 0,4"};
-
+    //Array of all mazes
+    private final String[][][] mazes = {maze1, maze2, maze3, maze4, maze5, maze6, maze7, maze8, maze9};
 
     @FXML
     TextField whiteLight;
@@ -97,6 +99,81 @@ public class MazesController {
     TextField cmark;
     @FXML
     Label output;
+    @FXML
+    ImageView zeroZero;
+    @FXML
+    ImageView zeroOne;
+    @FXML
+    ImageView zeroTwo;
+    @FXML
+    ImageView zeroThree;
+    @FXML
+    ImageView zeroFour;
+    @FXML
+    ImageView zeroFive;
+    @FXML
+    ImageView oneZero;
+    @FXML
+    ImageView oneOne;
+    @FXML
+    ImageView oneTwo;
+    @FXML
+    ImageView oneThree;
+    @FXML
+    ImageView oneFour;
+    @FXML
+    ImageView oneFive;
+    @FXML
+    ImageView twoZero;
+    @FXML
+    ImageView twoOne;
+    @FXML
+    ImageView twoTwo;
+    @FXML
+    ImageView twoThree;
+    @FXML
+    ImageView twoFour;
+    @FXML
+    ImageView twoFive;
+    @FXML
+    ImageView threeZero;
+    @FXML
+    ImageView threeOne;
+    @FXML
+    ImageView threeTwo;
+    @FXML
+    ImageView threeThree;
+    @FXML
+    ImageView threeFour;
+    @FXML
+    ImageView threeFive;
+    @FXML
+    ImageView fourZero;
+    @FXML
+    ImageView fourOne;
+    @FXML
+    ImageView fourTwo;
+    @FXML
+    ImageView fourThree;
+    @FXML
+    ImageView fourFour;
+    @FXML
+    ImageView fourFive;
+    @FXML
+    ImageView fiveZero;
+    @FXML
+    ImageView fiveOne;
+    @FXML
+    ImageView fiveTwo;
+    @FXML
+    ImageView fiveThree;
+    @FXML
+    ImageView fiveFour;
+    @FXML
+    ImageView fiveFive;
+
+
+
 
     private String opposite(String direction) {
         switch (direction) {
@@ -112,7 +189,6 @@ public class MazesController {
     }
 
     private String[][] identifyMaze(String identifier) {
-        String[][][] mazes = {maze1, maze2, maze3, maze4, maze5, maze6, maze7, maze8, maze9};
         int mazeIndex = 0;
         for (int i = 0; i < mazeCMarks.length; i++) {
             if (mazeCMarks[i].contains(identifier)) {
@@ -195,7 +271,6 @@ public class MazesController {
 
     @FXML
     private void onEnter() {
-
         String startingPoint = whiteLight.getText();
         String endPoint = redTriangle.getText();
         String identifier = cmark.getText();
@@ -204,7 +279,5 @@ public class MazesController {
         int endX = Integer.parseInt(endPoint.substring(0, 1));
         int endY = Integer.parseInt(endPoint.substring(2, 3));
         output.setText(solveMaze(identifyMaze(identifier), startX, startY, endX, endY));
-
-
     }
 }

@@ -3,16 +3,197 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ansavanix.ktanesolver.MazesController">
    <children>
-      <Label layoutX="20.0" layoutY="22.0" prefHeight="17.0" prefWidth="541.0" text="Enter x,y coordinates of the white light and red triangle, Circular Marking 1, and Circular Marking 2." />
-      <Label layoutX="20.0" layoutY="39.0" prefHeight="17.0" prefWidth="330.0" text="Format: x,y, Example, 1,2. Start counting at 0." />
-      <TextField fx:id="whiteLight" alignment="CENTER" layoutX="134.0" layoutY="114.0" promptText="White Light Coordinates" />
-      <TextField fx:id="redTriangle" alignment="CENTER" layoutX="301.0" layoutY="114.0" promptText="Red Triangle Coordinates" />
-      <Button layoutX="278.0" layoutY="157.0" mnemonicParsing="false" onAction="#onEnter" text="Done" />
-      <Label fx:id="output" alignment="CENTER" layoutX="45.0" layoutY="229.0" prefHeight="17.0" prefWidth="512.0" />
-      <TextField fx:id="cmark" alignment="CENTER" layoutX="215.0" layoutY="90.0" promptText="Circular Marking Coordinate" />
+      <TextField fx:id="whiteLight" alignment="CENTER" layoutX="429.0" layoutY="344.0" promptText="White Light Coordinates" visible="false" />
+      <TextField fx:id="redTriangle" alignment="CENTER" layoutX="429.0" layoutY="356.0" promptText="Red Triangle Coordinates" visible="false" />
+      <Button layoutX="279.0" layoutY="344.0" mnemonicParsing="false" onAction="#onEnter" text="Done" />
+      <Label fx:id="output" alignment="CENTER" layoutX="34.0" layoutY="282.0" prefHeight="17.0" prefWidth="512.0" />
+      <TextField fx:id="cmark" alignment="CENTER" layoutX="429.0" layoutY="368.0" promptText="Circular Marking Coordinate" visible="false" />
+      <ImageView fx:id="zeroZero" fitHeight="17.0" fitWidth="13.0" layoutX="233.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="oneZero" fitHeight="17.0" fitWidth="13.0" layoutX="259.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="twoZero" fitHeight="17.0" fitWidth="13.0" layoutX="285.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="threeZero" fitHeight="17.0" fitWidth="13.0" layoutX="311.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fourZero" fitHeight="17.0" fitWidth="13.0" layoutX="337.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fiveZero" fitHeight="17.0" fitWidth="13.0" layoutX="363.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="zeroOne" fitHeight="17.0" fitWidth="13.0" layoutX="233.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="oneOne" fitHeight="17.0" fitWidth="13.0" layoutX="259.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="twoOne" fitHeight="17.0" fitWidth="13.0" layoutX="285.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="threeOne" fitHeight="17.0" fitWidth="13.0" layoutX="311.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fourOne" fitHeight="17.0" fitWidth="13.0" layoutX="337.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fiveOne" fitHeight="17.0" fitWidth="13.0" layoutX="363.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="zeroTwo" fitHeight="17.0" fitWidth="13.0" layoutX="233.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="oneTwo" fitHeight="17.0" fitWidth="13.0" layoutX="259.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="twoTwo" fitHeight="17.0" fitWidth="13.0" layoutX="285.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="threeTwo" fitHeight="17.0" fitWidth="13.0" layoutX="311.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fourTwo" fitHeight="17.0" fitWidth="13.0" layoutX="337.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fiveTwo" fitHeight="17.0" fitWidth="13.0" layoutX="363.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="zeroThree" fitHeight="17.0" fitWidth="13.0" layoutX="233.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="oneThree" fitHeight="17.0" fitWidth="13.0" layoutX="259.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="twoThree" fitHeight="17.0" fitWidth="13.0" layoutX="285.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="threeThree" fitHeight="17.0" fitWidth="13.0" layoutX="311.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fourThree" fitHeight="17.0" fitWidth="13.0" layoutX="337.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fiveThree" fitHeight="17.0" fitWidth="13.0" layoutX="363.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="zeroFour" fitHeight="17.0" fitWidth="13.0" layoutX="233.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="oneFour" fitHeight="17.0" fitWidth="13.0" layoutX="259.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="twoFour" fitHeight="17.0" fitWidth="13.0" layoutX="285.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="threeFour" fitHeight="17.0" fitWidth="13.0" layoutX="311.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fourFour" fitHeight="17.0" fitWidth="13.0" layoutX="337.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fiveFour" fitHeight="17.0" fitWidth="13.0" layoutX="363.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="zeroFive" fitHeight="17.0" fitWidth="13.0" layoutX="233.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="oneFive" fitHeight="17.0" fitWidth="13.0" layoutX="259.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="twoFive" fitHeight="17.0" fitWidth="13.0" layoutX="285.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="threeFive" fitHeight="17.0" fitWidth="13.0" layoutX="311.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fourFive" fitHeight="17.0" fitWidth="13.0" layoutX="337.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fiveFive" fitHeight="17.0" fitWidth="13.0" layoutX="363.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+         <image>
+            <Image url="@mazepoint.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="14.0" prefHeight="67.0" prefWidth="581.0" text="Select the point with the circular marking." />
    </children>
 </AnchorPane>
