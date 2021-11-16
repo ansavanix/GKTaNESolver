@@ -13,7 +13,7 @@ public class MazesController {
     //r = can go right.
     //l = can go left.
     //Mazes listed starting from the top left.
-    private final String[][] maze1 =  {
+    private final String[][] maze1 = {
             {"rd", "lr", "ld", "rd", "lr", "l"},
             {"ud", "rd", "ul", "ur", "lr", "ld"},
             {"ud", "ur", "ld", "rd", "lr", "uld"},
@@ -179,13 +179,14 @@ public class MazesController {
     private String redTriangleCoord = "";
     private String whiteLightCoord = "";
 
-
+    //TODO: Make readable directions give shortened output by reducing consecutive directions to "3 *direction*"
+    //Example: Right Right Right = 3 Right
     private String readableDirections(String directions) {
         String readableDirections = "";
         for (int i = 0; i < directions.length(); i++) {
-            String singularDirection = directions.substring(i,i+1);
+            String singularDirection = directions.substring(i, i + 1);
 
-            switch(singularDirection) {
+            switch (singularDirection) {
                 case "r":
                     readableDirections += "Right ";
                     break;
@@ -202,6 +203,7 @@ public class MazesController {
         }
         return readableDirections;
     }
+
     private String opposite(String direction) {
         switch (direction) {
             case "u":
@@ -294,8 +296,9 @@ public class MazesController {
         return readableDirections(tempDirections);
 
     }
+
     private void coordinateClick(String coordinate) {
-        switch(toChooseIndex) {
+        switch (toChooseIndex) {
             case 0:
                 instructions.setText("Select the point with the white light.");
                 cmarkCoord = coordinate;
@@ -319,8 +322,31 @@ public class MazesController {
         }
         toChooseIndex++;
     }
+
+    @FXML
+    private void onReset() {
+        toChooseIndex = 0;
+        instructions.setText("Select the point with the circular marking.");
+        if (!cmarkCoord.equals("")) {
+            Image standard = coordImage.getImage();
+            coordinateToImageView(cmarkCoord).setImage(standard);
+            cmarkCoord = "";
+            if (!whiteLightCoord.equals("")) {
+                coordinateToImageView(whiteLightCoord).setImage(standard);
+                whiteLightCoord = "";
+                if (!redTriangleCoord.equals("")) {
+                    coordinateToImageView(redTriangleCoord).setImage(standard);
+                    redTriangleCoord = "";
+                }
+            }
+
+        }
+
+
+    }
+
     private ImageView coordinateToImageView(String coordinate) {
-        switch(coordinate) {
+        switch (coordinate) {
             case "0,0":
                 return zeroZero;
             case "0,1":
@@ -397,165 +423,180 @@ public class MazesController {
     }
 
     @FXML
-    private void onReset() {
-        toChooseIndex = 0;
-        instructions.setText("Select the point with the circular marking.");
-        Image standard = coordImage.getImage();
-        if (!cmarkCoord.equals("")) {
-            coordinateToImageView(cmarkCoord).setImage(standard);
-            cmarkCoord = "";
-            if (!whiteLightCoord.equals("")) {
-                coordinateToImageView(whiteLightCoord).setImage(standard);
-                whiteLightCoord = "";
-                if (!redTriangleCoord.equals("")) {
-                    coordinateToImageView(redTriangleCoord).setImage(standard);
-                }
-            }
-
-        }
-
-
-    }
-    @FXML
     private void clickZeroZero() {
         coordinateClick("0,0");
     }
+
     @FXML
     private void clickZeroOne() {
         coordinateClick("0,1");
     }
+
     @FXML
     private void clickZeroTwo() {
         coordinateClick("0,2");
     }
+
     @FXML
     private void clickZeroThree() {
         coordinateClick("0,3");
     }
+
     @FXML
     private void clickZeroFour() {
         coordinateClick("0,4");
     }
+
     @FXML
     private void clickZeroFive() {
         coordinateClick("0,5");
     }
+
     @FXML
     private void clickOneZero() {
         coordinateClick("1,0");
     }
+
     @FXML
     private void clickOneOne() {
         coordinateClick("1,1");
     }
+
     @FXML
     private void clickOneTwo() {
         coordinateClick("1,2");
     }
+
     @FXML
     private void clickOneThree() {
         coordinateClick("1,3");
     }
+
     @FXML
     private void clickOneFour() {
         coordinateClick("1,4");
     }
+
     @FXML
     private void clickOneFive() {
         coordinateClick("1,5");
     }
+
     @FXML
     private void clickTwoZero() {
         coordinateClick("2,0");
     }
+
     @FXML
     private void clickTwoOne() {
         coordinateClick("2,1");
     }
+
     @FXML
     private void clickTwoTwo() {
         coordinateClick("2,2");
     }
+
     @FXML
     private void clickTwoThree() {
         coordinateClick("2,3");
     }
+
     @FXML
     private void clickTwoFour() {
         coordinateClick("2,4");
     }
+
     @FXML
     private void clickTwoFive() {
         coordinateClick("2,5");
     }
+
     @FXML
     private void clickThreeZero() {
         coordinateClick("3,0");
     }
+
     @FXML
     private void clickThreeOne() {
         coordinateClick("3,1");
     }
+
     @FXML
     private void clickThreeTwo() {
         coordinateClick("3,2");
     }
+
     @FXML
     private void clickThreeThree() {
         coordinateClick("3,3");
     }
+
     @FXML
     private void clickThreeFour() {
         coordinateClick("3,4");
     }
+
     @FXML
     private void clickThreeFive() {
         coordinateClick("3,5");
     }
+
     @FXML
     private void clickFourZero() {
         coordinateClick("4,0");
     }
+
     @FXML
     private void clickFourOne() {
         coordinateClick("4,1");
     }
+
     @FXML
     private void clickFourTwo() {
         coordinateClick("4,2");
     }
+
     @FXML
     private void clickFourThree() {
         coordinateClick("4,3");
     }
+
     @FXML
     private void clickFourFour() {
         coordinateClick("4,4");
     }
+
     @FXML
     private void clickFourFive() {
         coordinateClick("4,5");
     }
+
     @FXML
     private void clickFiveZero() {
         coordinateClick("5,0");
     }
+
     @FXML
     private void clickFiveOne() {
         coordinateClick("5,1");
     }
+
     @FXML
     private void clickFiveTwo() {
         coordinateClick("5,2");
     }
+
     @FXML
     private void clickFiveThree() {
         coordinateClick("5,3");
     }
+
     @FXML
     private void clickFiveFour() {
         coordinateClick("5,4");
     }
+
     @FXML
     private void clickFiveFive() {
         coordinateClick("5,5");
