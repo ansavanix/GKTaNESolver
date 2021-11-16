@@ -327,6 +327,7 @@ public class MazesController {
     private void onReset() {
         toChooseIndex = 0;
         instructions.setText("Select the point with the circular marking.");
+        output.setText("");
         if (!cmarkCoord.equals("")) {
             Image standard = coordImage.getImage();
             coordinateToImageView(cmarkCoord).setImage(standard);
