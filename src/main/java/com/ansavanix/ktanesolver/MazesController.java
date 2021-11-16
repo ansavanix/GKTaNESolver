@@ -2,7 +2,6 @@ package com.ansavanix.ktanesolver;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -91,14 +90,7 @@ public class MazesController {
     private final String[] mazeCMarks = {"0,1 5,2", "4,1 1,3", "3,3 5,3", "0,0 0,3", "4,2 3,5", "4,0 2,4", "1,0 1,5", "3,0 2,3", "1,2 0,4"};
     //Array of all mazes
     private final String[][][] mazes = {maze1, maze2, maze3, maze4, maze5, maze6, maze7, maze8, maze9};
-    private final String[] toChoose = {"cmark", "whitelight", "redtriangle"};
     int toChooseIndex = 0;
-    @FXML
-    TextField whiteLight;
-    @FXML
-    TextField redTriangle;
-    @FXML
-    TextField cmark;
     @FXML
     Label output;
     @FXML
@@ -181,9 +173,11 @@ public class MazesController {
     ImageView whiteLightImage;
     @FXML
     ImageView redTriangleImage;
-    private String cmarkCoord;
-    private String redTriangleCoord;
-    private String whiteLightCoord;
+    @FXML
+    ImageView coordImage;
+    private String cmarkCoord = "";
+    private String redTriangleCoord = "";
+    private String whiteLightCoord = "";
 
 
     private String readableDirections(String directions) {
@@ -403,15 +397,24 @@ public class MazesController {
     }
 
     @FXML
-    private void onEnter() {
-        String startingPoint = whiteLight.getText();
-        String endPoint = redTriangle.getText();
-        String identifier = cmark.getText();
-        int startX = Integer.parseInt(startingPoint.substring(0, 1));
-        int startY = Integer.parseInt(startingPoint.substring(2, 3));
-        int endX = Integer.parseInt(endPoint.substring(0, 1));
-        int endY = Integer.parseInt(endPoint.substring(2, 3));
-        output.setText(solveMaze(identifyMaze(identifier), startX, startY, endX, endY));
+    private void onReset() {
+        toChooseIndex = 0;
+        instructions.setText("Select the point with the circular marking.");
+        Image standard = coordImage.getImage();
+        if (!cmarkCoord.equals("")) {
+            coordinateToImageView(cmarkCoord).setImage(standard);
+            cmarkCoord = "";
+            if (!whiteLightCoord.equals("")) {
+                coordinateToImageView(whiteLightCoord).setImage(standard);
+                whiteLightCoord = "";
+                if (!redTriangleCoord.equals("")) {
+                    coordinateToImageView(redTriangleCoord).setImage(standard);
+                }
+            }
+
+        }
+
+
     }
     @FXML
     private void clickZeroZero() {

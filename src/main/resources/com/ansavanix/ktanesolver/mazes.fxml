@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ansavanix.ktanesolver.MazesController">
    <children>
-      <Button layoutX="279.0" layoutY="344.0" mnemonicParsing="false" onAction="#onEnter" text="Done" />
+      <Button layoutX="279.0" layoutY="344.0" mnemonicParsing="false" onAction="#onReset" text="Reset" />
       <Label fx:id="output" alignment="CENTER" layoutX="15.0" layoutY="282.0" prefHeight="17.0" prefWidth="581.0">
          <font>
             <Font size="12.0" />
@@ -195,19 +195,24 @@
          </image>
       </ImageView>
       <Label fx:id="instructions" alignment="CENTER" layoutX="10.0" layoutY="14.0" prefHeight="67.0" prefWidth="581.0" text="Select the point with the circular marking." />
-      <ImageView fx:id="cmarkImage" fitHeight="24.0" fitWidth="39.0" layoutX="10.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="cmarkImage" fitHeight="24.0" fitWidth="39.0" layoutX="32.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@circularmarking.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="whiteLightImage" fitHeight="24.0" fitWidth="39.0" layoutX="34.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="whiteLightImage" fitHeight="24.0" fitWidth="39.0" layoutX="56.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@glowingwhitepoint.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="redTriangleImage" fitHeight="24.0" fitWidth="39.0" layoutX="58.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="redTriangleImage" fitHeight="24.0" fitWidth="39.0" layoutX="80.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@mazetriangle.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="coordImage" fitHeight="24.0" fitWidth="39.0" layoutX="10.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@mazepoint.png" />
          </image>
       </ImageView>
    </children>
