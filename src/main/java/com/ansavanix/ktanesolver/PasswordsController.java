@@ -6,22 +6,27 @@ import javafx.scene.control.TextField;
 
 public class PasswordsController {
     @FXML
-    TextField input;
+    TextField column1;
+    @FXML
+    TextField column2;
+    @FXML
+    TextField column3;
+    @FXML
+    TextField column4;
+    @FXML
+    TextField column5;
     @FXML
     Label output;
     private String[] passwordsPoss = {"about", "after", "again", "below", "could", "every", "first", "found", "great", "house", "large", "learn", "never", "other", "place", "plant", "point", "right", "small", "sound", "spell", "still", "study", "their", "there", "these", "thing", "think", "three", "water", "where", "which", "world", "would", "write"};
 
     @FXML
     private void solve() {
-        String available = input.getText().trim() + " ";
         String[] availableArr = new String[5];
-        int i = 0;
-        while (available.contains(" ")) {
-            int end = available.indexOf(" ");
-            availableArr[i] = available.substring(0, end);
-            available = available.substring(end + 1);
-            i++;
-        }
+        availableArr[0] = column1.getText().trim();
+        availableArr[1] = column2.getText().trim();
+        availableArr[2] = column3.getText().trim();
+        availableArr[3] = column4.getText().trim();
+        availableArr[4] = column5.getText().trim();
         boolean solved = false;
         int j = 0;
         while (!solved && j < 35) {
